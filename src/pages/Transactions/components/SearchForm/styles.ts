@@ -28,8 +28,14 @@ gap: 1rem;
         color: ${props => props.theme["green-300"]};
         font-weight: bold;
         border-radius: 6px;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
         
-        &:hover {
+        &:not(:disabled):hover {
             background: transparent;
         border-color: ${props => props.theme["green-500"]};
         color: ${props => props.theme.white};
